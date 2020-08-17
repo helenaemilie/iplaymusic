@@ -1,9 +1,7 @@
-<% const { brand } = locals %>
-
 <header>
-    <% if (brand) { %>
-    <h1 class="brand"><%= brand %></h1>
-    <% } else { %>
-    <h1>My precious brand</h1>
-    <% } %>
+  <div class="header">
+    <ion-icon name="chevron-back-outline" class="header-icon__back"></ion-icon>
+    <p class="header-title">Featured</p>
+    <ion-icon name="search-outline" class="header-icon__search"></ion-icon>
+  </div>
 </header>

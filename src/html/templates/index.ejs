@@ -1,14 +1,21 @@
 <%- include('../partials/before-header')  %>
-<%- include('../partials/header.ejs', { brand: 'My very Cool Webshop' })  %>
-<%- include('../partials/navigation') %>
+<%- include('../partials/header')  %>
 
 <main>
-    <article>
-        <h2>Welcome to my cool webshop</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, nobis! Accusamus, ex aspernatur
-            voluptatem earum id sed sit perferendis maxime, iste sint tenetur deleniti porro eius voluptas quod,
-            dolorum illo!</p>
-        <img src="assets/img/paaskeaeg.jpg" alt="">
+    <h1 class="main-title">Featured</h1>
+    <article class="featured-container">
+        <img class="featured-img" src="https://via.placeholder.com/325x425" alt="placeholder">
+        <div class="featured-text">
+            <h2 class="featured-headline">The Greatest Showman</h2>
+            <p class="featured-genre">Soundtrack</p>
+        </div>
+    </article>
+    <article class="featured-container">
+        <img class="featured-img" src="https://via.placeholder.com/325x425" alt="placeholder">
+        <div class="featured-text">
+            <h2 class="featured-headline">The Greatest Showman</h2>
+            <p class="featured-genre">Soundtrack</p>
+        </div>
     </article>
 </main>
 
