@@ -1,0 +1,23 @@
+body{
+    background-color: red;
+    border: blue solid 3px;
+    font: 100% $font-stack;
+    color: $primary-color;
+}
+
+article {
+    width: 30em;
+    margin: 0 auto;
+}
+
+
+@include mq(48em) {
+    body {
+        background-color: palegoldenrod;
+    }
+}
+@include mq(64em) {
+    body {
+        background-color: plum;
+    }
+}

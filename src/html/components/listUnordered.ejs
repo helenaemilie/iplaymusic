@@ -1,0 +1,7 @@
+<% const { list_class, items } = locals %>
+
+<ul <% if (list_class) { %> class="<%= list_class %>" <% } %>>
+    <% items.forEach(item => { %>
+    <%- include('listItem.ejs', { list_class, item }) %>
+    <% }); %>
+</ul>

@@ -1,0 +1,17 @@
+.navigation {
+    @include hest(12px);
+    background-color: orange;
+
+    &__link {
+        text-decoration: none;
+        color: red;
+
+        &_active {
+            text-transform: uppercase;          
+        }
+
+        &:hover {
+            color: green;
+        } 
+    }
+}

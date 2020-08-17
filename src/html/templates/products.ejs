@@ -1,0 +1,31 @@
+<% let data = {
+    "items": [
+        "Item 1",
+        "Item 2",
+        "Item 3"
+    ]
+} %>
+
+<%- include('../partials/before-header.ejs', {
+    title: 'My faboulous new title',
+    body_class:"test"
+}) %>
+<%- include('../partials/header.ejs', { brand: 'My very Cool Webshop' })  %>
+<%- include('../partials/navigation.ejs') %>
+<main>
+    <article>
+        <h2>List of cool products</h2>
+        <ul>
+            <li>Product 1</li>
+            <li>Product 2</li>
+            <li>Product 3</li>
+            <li>Product 4</li>
+            <li>Product 5</li>
+        </ul>
+        <%- include('../components/listUnordered.ejs', { 
+            items: data.items
+        }) %>
+    </article>
+</main>
+<%- include('../partials/footer.ejs') %>
+<%- include('../partials/after-footer.ejs') %>
