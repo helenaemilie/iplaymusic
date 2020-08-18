@@ -1,4 +1,46 @@
-.categories_button{
+.categories-container{
+    padding-bottom: 80px;
+}
+.categories-button{
     display:flex;
     align-items: center;
+    justify-content: space-between;
+    width:325px;
+    margin-bottom: 20px;
+    color:white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 10px;
+    border:none;
+    padding: 20px;
+    align-content: flex-start;
+    user-select: none;
+
+    &_pink{
+        background-color:#D70060;
+    }
+    &_orange{
+        background-color:#E54028;
+    }
+    &_golden{
+        background-color:#F18D05;
+    }
+    &_yellow{
+        background-color:#F2BC06;
+    }
+    &_lime{
+        background-color:#5EB11C;
+    }
+    &_green{
+        background-color:#3A7634;
+    }
+    &_turquoise{
+        background-color:#0ABEBE;
+    }
+    &_blue{
+        background-color:#00A1CB;
+    }
+    &_navy{
+        background-color:#115793;
+    }
 }

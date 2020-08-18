@@ -1,5 +1,5 @@
 <%- include('../partials/before-header')  %>
-<%- include('../partials/header')  %>
+<%- include('../partials/header.ejs', {title: "Featured"})  %>
 
 <main>
     <h1 class="main-title">Featured</h1>
@@ -10,6 +10,7 @@
             <p class="featured-genre">Soundtrack</p>
         </div>
     </article>
+
     <article class="featured-container">
         <img class="featured-img" src="https://via.placeholder.com/325x425" alt="placeholder">
         <div class="featured-text">

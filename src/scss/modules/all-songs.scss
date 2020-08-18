@@ -1,0 +1,33 @@
+.songs-text{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.songs-play{
+    background: $gradient-color;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    color:white;
+
+    &_icon{
+        height:20px;
+        width:20px;
+    }
+}
+
+.songs-text_container{
+    padding-right: 70px;
+}
+
+.songs-text_title{
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 5px;
+}
+.songs-text_artist{
+    margin-bottom: 5px;
+}
