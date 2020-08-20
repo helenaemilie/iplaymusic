@@ -9,9 +9,13 @@
     margin-left:25px;
 }
 .player-cover{
+    display:flex;
+    justify-content: center;
+    &_img{
     width:375px;
     height:375px;
     margin:30px 0;
+    }
 }
 .player-title{
     text-align: center;
@@ -55,6 +59,8 @@
 }
 .slidecontainer {
     width: 100%;
+    display:flex;
+    justify-content: center;
   }
 
   .slider {

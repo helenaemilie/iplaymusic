@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="da">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
+    
+
+<title>iPlay Music</title>
+
+</head>
+
+
+
+
+
+    <body>
+        
+
+<main>
+    <h1 class="login-title">Log In</h1>
+
+    <form action="action_page.php" method="post">
+
+        <div class="login-container">
+          <div><label for="uname"><b>Username</b></label></div>
+            <div class="login-container_username">
+                <input class="login-username" type="text" placeholder="Enter your username" name="uname" required>
+                <ion-icon name="person-circle-outline"></ion-icon>
+            </div>
+      
+          <div><label for="psw"><b>Password</b></label></div>
+          <div class="login-container_password">
+              <input class="login-password" type="password" placeholder="Enter your password" name="psw" required>
+              <ion-icon name="key"></ion-icon>
+        </div>
+          <div class="login-box"><button class="login-box_btn" type="submit">Log in</button></div>
+        </div>
+      </form>
+      <div class="touch-container">
+          <button class="touch-container_btn"><ion-icon name="finger-print"></ion-icon></button>
+          <p class="touch-container_text">One-Touch Login</p>
+      </div>
+</main>
+
+<script type="module" src="/assets/js/index.js"></script>
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+</body>
+
+</html>
