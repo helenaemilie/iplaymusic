@@ -1,0 +1,34 @@
+<%- include('../partials/before-header.ejs') %>
+<body class="albums-details">
+    <main>
+        <article class="albums-container">
+            <div class="header-normal">
+                <ion-icon name="chevron-back-outline" class="header-icon__back"></ion-icon>
+                <p class="header-title">PLAYING</p>
+            </div>
+           <img class="player-cover" src="/assets/img/shinedown-2018-attention-attention-cd.jpg">
+           <div class="player-title">
+                <p class="player-title_song">CREATURES</p>
+                <p class="player-title_band">Shinedown</p>
+           </div>
+           <div class="slidecontainer">
+            <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          </div>
+          <div class="player-time">
+              <p class="player-time_start">0:00</p>
+              <p class="player-time_start">3:56</p>
+          </div>
+           <div class="player-controls">
+            <ion-icon class="player-skip_fast" name="play-skip-back-sharp"></ion-icon>
+            <ion-icon class="player-skip" name="play-back-sharp"></ion-icon>
+                <div class="player-play">
+                    <ion-icon class="player-play_icon" name="play-sharp"></ion-icon>
+                </div>
+                <ion-icon class="player-skip" name="play-forward-sharp"></ion-icon>
+                <ion-icon class="player-skip_fast" name="play-skip-forward-sharp"></ion-icon>
+            </div>
+        </article>
+    </main>
+</body>
+<%- include('../partials/footer.ejs') %>
+<%- include('../partials/after-footer.ejs') %>
