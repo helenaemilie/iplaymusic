@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="da">
+
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;700&display=swap" rel="stylesheet">
+    
+
+<title>iPlay Music</title>
+
+</head>
+
+
+
+
+
+    <body>
+        
+<header>
+  <div class="header">
+    <ion-icon name="chevron-back-outline" class="header-icon__back"></ion-icon>
+    <p class="header-title">
+      Categories</p>
+    <ion-icon name="search-outline" class="header-icon__search"></ion-icon>
+  </div>
+</header>
+<main>
+    <h1 class="main-title">Categories</h1>
+    <article class="categories-container">
+        <div class="categories-text">
+            <div class="genres-dropdown">
+                <button onclick="categoriesOpen()" class="categories-button categories-button_pink">Alternative<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+                <div id="categoriesDrop" class="categories-dropdown">
+                    <a class="dropdown-links" href="#">Rock<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    <a class="dropdown-links" href="#">Heavy Metal<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    <a class="dropdown-links" href="#">Punk-rock<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+
+            <button class="categories-button categories-button_orange">Blues<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_golden">Classical<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_yellow">Country<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_lime">Dance<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_green">Electronic<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_turquoise">Fitness & Workout<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_blue">Hip-Hop/Rap<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <button class="categories-button categories-button_navy">Industrial<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+        </div>
+    </article>
+</main>
+<script src="/assets/js/dropdown.js"></script>
+<footer>
+    <div class="footer-main">
+        <a href="/albums/index.html" class="navigation-links"><ion-icon name="albums" class="footer-icon__albums"></ion-icon></a>
+        <a href="/playlists/index.html" class="navigation-links"><ion-icon name="list" class="footer-icon__playlist"></ion-icon></a>
+        <a href="/index.html" class="navigation-links"><div class="footer-main__featured"><ion-icon name="star" class="footer-icon__featured"></ion-icon></div></a>
+        <ion-icon onclick="switchMode()" name="contrast-outline" class="footer-icon__mode"></ion-icon>
+        <a href="/categories/index.html" class="navigation-links"><ion-icon name="grid" class="footer-icon__categories"></ion-icon></a>
+    </div>
+</footer>
+
+<script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="/assets/js/darkmode.js"></script>
+</body>
+
+</html>

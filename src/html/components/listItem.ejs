@@ -1,0 +1,5 @@
+<% const { list_class, item } = locals %>
+
+<li <% if (list_class) { %> class="<%= list_class + '__item' %>" <% } %>>
+    <%= item %>
+</li>

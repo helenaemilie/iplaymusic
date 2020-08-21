@@ -1,0 +1,26 @@
+$primary-color: #FF1168;
+$secondary-color: #341931;
+$additional-color: #111625;
+$gradient-color:linear-gradient(to right,#ee0979,#ff6a00);
+
+*{
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    margin: 0 25px;
+    margin-bottom: 4em;
+    background-color:white;
+    color:$secondary-color;
+}
+p {
+    margin:0;
+}
+
+ion-icon{
+    height:30px;
+    width:30px;
+}
+
+
