@@ -87,15 +87,16 @@
 </main>
 <footer>
     <div class="footer-main">
-        <ion-icon name="pulse-outline" class="footer-icon__activity"></ion-icon>
-        <ion-icon name="mic-outline" class="footer-icon__mic"></ion-icon>
-        <div class="footer-main__radio"><ion-icon name="radio-outline" class="footer-icon__radio"></ion-icon></div>
-        <ion-icon name="contrast-outline" class="footer-icon__mode"></ion-icon>
-        <ion-icon name=settings-outline class="footer-icon__settings"></ion-icon>
+        <a href="/albums/index.html" class="navigation-links"><ion-icon name="albums" class="footer-icon__albums"></ion-icon></a>
+        <a href="/playlists/index.html" class="navigation-links"><ion-icon name="list" class="footer-icon__playlist"></ion-icon></a>
+        <a href="/index.html" class="navigation-links"><div class="footer-main__featured"><ion-icon name="star" class="footer-icon__featured"></ion-icon></div></a>
+        <ion-icon onclick="switchMode()" name="contrast-outline" class="footer-icon__mode"></ion-icon>
+        <a href="/categories/index.html" class="navigation-links"><ion-icon name="grid" class="footer-icon__categories"></ion-icon></a>
     </div>
 </footer>
-<script type="module" src="/assets/js/index.js"></script>
+
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
+<script src="/assets/js/darkmode.js"></script>
 </body>
 
 </html>

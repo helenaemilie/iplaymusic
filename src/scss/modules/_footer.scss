@@ -13,7 +13,7 @@
     right:0;
     background:white;
 
-    &__radio{
+    &__featured{
         background: $gradient-color;
         height: 55px;
         width: 55px;
@@ -23,12 +23,13 @@
         align-items:center;
     }
 
-.footer-icon__mic:active{
+.footer-icon__playlist:active{
     color: $secondary-color;
 }
-.footer-icon__radio{
+.footer-icon__featured{
         height:40px;
         width:40px;
         color:white;
+        margin-bottom: 2px;
 }
 }
