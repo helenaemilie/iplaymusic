@@ -4,7 +4,15 @@
     <h1 class="main-title">Categories</h1>
     <article class="categories-container">
         <div class="categories-text">
-            <button class="categories-button categories-button_pink">Alternative<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+            <div class="genres-dropdown">
+                <button onclick="categoriesOpen()" class="categories-button categories-button_pink">Alternative<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
+                <div id="categoriesDrop" class="categories-dropdown">
+                    <a class="dropdown-links" href="#">Rock<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    <a class="dropdown-links" href="#">Heavy Metal<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                    <a class="dropdown-links" href="#">Punk-rock<ion-icon name="chevron-forward-outline"></ion-icon></a>
+                </div>
+            </div>
+
             <button class="categories-button categories-button_orange">Blues<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
             <button class="categories-button categories-button_golden">Classical<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
             <button class="categories-button categories-button_yellow">Country<ion-icon class="categories-button_icon" name="ellipsis-horizontal"></ion-icon></button>
@@ -16,5 +24,6 @@
         </div>
     </article>
 </main>
+<script src="/assets/js/dropdown.js"></script>
 <%- include('../partials/footer.ejs') %>
 <%- include('../partials/after-footer.ejs') %>

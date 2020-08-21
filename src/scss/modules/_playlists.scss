@@ -42,3 +42,14 @@
     align-items: center;
     justify-content: center;
 }
+.playlist_bottom{
+    display:flex;
+    justify-content: center;
+}
+.playlist-bottom_btn{
+    border: 3px solid $primary-color;
+    color:$primary-color;
+    padding: 18px 20px;
+    border-radius:50px;
+    margin: 10px 0;
+}
