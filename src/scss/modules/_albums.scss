@@ -12,9 +12,16 @@
         color:$primary-color;
     }
 }
+
+.albums-featured_images{
+    grid-row: 1/2;
+    margin:10px;
+}
+
 .albums-featured{
-    display:flex;
-    justify-content: space-between;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    display:grid;
 
     &_img{
         height:130px;
