@@ -30,6 +30,9 @@
             <div id="image" class="player-cover">
                 <img class="player-cover_img" src="/assets/img/neffex.jpg">
             </div>
+            <audio class="audio-song">
+                <source src="/assets/media/neffex.mp3" type="audio/mpeg">
+            </audio>
            <div class="player-title">
                 <p id="songtitle" class="player-title_song">CREATURES</p>
                 <p class="player-title_band">Shinedown</p>
@@ -45,23 +48,16 @@
             <ion-icon class="player-skip_fast" name="play-skip-back-sharp"></ion-icon>
             <ion-icon class="player-skip" name="play-back-sharp"></ion-icon>
                 <div class="player-play">
-                    <ion-icon class="player-play_icon" name="play-sharp"></ion-icon>
+                    <ion-icon class="player-play_play" name="play-sharp"></ion-icon>
+                    <ion-icon class="player-play_pause" name="pause-sharp"></ion-icon>
                 </div>
                 <ion-icon class="player-skip" name="play-forward-sharp"></ion-icon>
                 <ion-icon class="player-skip_fast" name="play-skip-forward-sharp"></ion-icon>
             </div>
         </article>
     </main>
+    <script src="/assets/js/player.js"></script>
 </body>
-<footer>
-    <div class="footer-main">
-        <a href="/albums/index.html" class="navigation-links"><ion-icon name="albums" class="footer-icon__albums"></ion-icon></a>
-        <a href="/playlists/index.html" class="navigation-links"><ion-icon name="list" class="footer-icon__playlist"></ion-icon></a>
-        <a href="/index.html" class="navigation-links"><div class="footer-main__featured"><ion-icon name="star" class="footer-icon__featured"></ion-icon></div></a>
-        <ion-icon onclick="switchMode()" name="contrast-outline" class="footer-icon__mode"></ion-icon>
-        <a href="/categories/index.html" class="navigation-links"><ion-icon name="grid" class="footer-icon__categories"></ion-icon></a>
-    </div>
-</footer>
 
 <script src="https://unpkg.com/ionicons@5.1.2/dist/ionicons.js"></script>
 <script src="/assets/js/darkmode.js"></script>

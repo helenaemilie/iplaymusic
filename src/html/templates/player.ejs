@@ -9,6 +9,9 @@
             <div id="image" class="player-cover">
                 <img class="player-cover_img" src="/assets/img/neffex.jpg">
             </div>
+            <audio class="audio-song">
+                <source src="/assets/media/neffex.mp3" type="audio/mpeg">
+            </audio>
            <div class="player-title">
                 <p id="songtitle" class="player-title_song">CREATURES</p>
                 <p class="player-title_band">Shinedown</p>
@@ -24,13 +27,14 @@
             <ion-icon class="player-skip_fast" name="play-skip-back-sharp"></ion-icon>
             <ion-icon class="player-skip" name="play-back-sharp"></ion-icon>
                 <div class="player-play">
-                    <ion-icon class="player-play_icon" name="play-sharp"></ion-icon>
+                    <ion-icon class="player-play_play" name="play-sharp"></ion-icon>
+                    <ion-icon class="player-play_pause" name="pause-sharp"></ion-icon>
                 </div>
                 <ion-icon class="player-skip" name="play-forward-sharp"></ion-icon>
                 <ion-icon class="player-skip_fast" name="play-skip-forward-sharp"></ion-icon>
             </div>
         </article>
     </main>
+    <script src="/assets/js/player.js"></script>
 </body>
-<%- include('../partials/footer.ejs') %>
 <%- include('../partials/after-footer.ejs') %>

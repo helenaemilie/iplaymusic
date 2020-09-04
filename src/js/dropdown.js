@@ -1,10 +1,32 @@
-/* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+fetch("https://api.spotify.com/v1/browse/categories", {
+    method: "GET",
+    headers: {
+        "Authorization": "Bearer " + myToken
+    }
+})
+
+    .then(response => response.json())
+    .then(result => {
+        console.log(result)
+        let article = document.querySelector("article")
+        result.categories.items.forEach(item => {
+            let button = document.createElement("button");
+            button.classList.add("categories-button");
+            let div = document.createElement("div")
+            div.classList.add("categories-dropdown")
+            div.setAttribute("data-id", item.id)
+            button.appendChild(div);
+            article.appendChild(div);
+            button.addEventListener("click", function () {
+                console.log(event.target.dataset.id)
+                let clickId = event.target.dataset.id
+
+            })
+    })
 function categoriesOpen() {
     document.getElementById("categoriesDrop").classList.toggle("show");
   }
   
-  // Close the dropdown menu if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.categories-button')) {
       var dropdowns = document.getElementsByClassName("categories-dropdown");
@@ -17,3 +39,4 @@ function categoriesOpen() {
       }
     }
   }
+    })

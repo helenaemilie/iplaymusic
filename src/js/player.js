@@ -1,61 +1,42 @@
-var songs = ["/assets/songs/neffex.mp3","/assets/songs/biv.mp3","/assets/songs/biv.mp3"];
-var poster = ["/assets/img/neffex.jpg","/assets/img/biv.jpg","/assets/img/noah.jpg"];
+let play = document.querySelector(".player-play_play")
+let song = document.querySelector(".audio-song")
+let pause = document.querySelector(".player-play_pause")
 
-var songTitle = document.getElementById("songTitle");
-var fillBar = document.getElementById("fill");
+play.addEventListener("click",() => {
+    console.log("click");
+    song.play();
+})
+pause.addEventListener("click",() => {
+    console.log("click");
+    song.pause();
+})
 
-var song = new Audio();
-var currentSong = 0;    
-
-window.onload = playSong;   
-
-function playSong(){
-    
-    song.src = songs[currentSong];  //set the source of 0th song 
-    
-    songTitle.textContent = songs[currentSong]; // set the title of song
-    
-    song.play();  
-}
-
-function playOrPauseSong(){
-    
-    if(song.paused){
-        song.play();
-        $("#play img").attr("src","/assets/img/pause.png");
+fetch("https://api.spotify.com/v1/browse/new-releases", {
+    method: "GET",
+    headers: {
+        "Authorization": "Bearer " + myToken
     }
-    else{
-        song.pause();
-        $("#play img").attr("src","/assets/img/play.png");
-    }
-}
+})
 
-song.addEventListener('timeupdate',function(){ 
-    
-    var position = song.currentTime / song.duration;
-    
-    fillBar.style.width = position * 100 +'%';
-});
+    .then(response => response.json())
+    .then(result => {
+        console.log(result)
+        let section = document.querySelector("section")
+        result.albums.items.forEach(item => {
+            let div = document.createElement("div");
+            div.classList.add("albums-featured_images");
+            let img = document.createElement("img")
+            img.classList.add("albums-featured_img")
+            img.setAttribute("data-id", item.id)
+            img.src = "https://via.placeholder.com/150"
+            img.setAttribute("data-src", item.images[0].url)
+            //img.src = item.images[0].url
+            div.appendChild(img);
+            section.appendChild(div);
+            img.addEventListener("click", function () {
+                console.log(event.target.dataset.id)
+                let clickId = event.target.dataset.id
 
-
-function next(){
-    
-    currentSong++;
-    if(currentSong > 2){
-        currentSong = 0;
-    }
-    playSong();
-    $("#play img").attr("src","/assets/img/pause.png");
-    $("#image img").attr("src",poster[currentSong]);
-}
-
-function pre(){
-    
-    currentSong--;
-    if(currentSong < 0){
-        currentSong = 2;
-    }
-    playSong();
-    $("#play img").attr("src","/assets/img/pause.png");
-    $("#image img").attr("src",poster[currentSong]);
-}
+            })
+    })
+})

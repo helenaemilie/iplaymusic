@@ -1,57 +1,41 @@
 "use strict";
 
-var songs = ["/assets/songs/neffex.mp3", "/assets/songs/biv.mp3", "/assets/songs/biv.mp3"];
-var poster = ["/assets/img/neffex.jpg", "/assets/img/biv.jpg", "/assets/img/noah.jpg"];
-var songTitle = document.getElementById("songTitle");
-var fillBar = document.getElementById("fill");
-var song = new Audio();
-var currentSong = 0;
-window.onload = playSong;
-
-function playSong() {
-  song.src = songs[currentSong]; //set the source of 0th song 
-
-  songTitle.textContent = songs[currentSong]; // set the title of song
-
+var play = document.querySelector(".player-play_play");
+var song = document.querySelector(".audio-song");
+var pause = document.querySelector(".player-play_pause");
+play.addEventListener("click", function () {
+  console.log("click");
   song.play();
-}
-
-function playOrPauseSong() {
-  if (song.paused) {
-    song.play();
-    $("#play img").attr("src", "/assets/img/pause.png");
-  } else {
-    song.pause();
-    $("#play img").attr("src", "/assets/img/play.png");
-  }
-}
-
-song.addEventListener('timeupdate', function () {
-  var position = song.currentTime / song.duration;
-  fillBar.style.width = position * 100 + '%';
 });
-
-function next() {
-  currentSong++;
-
-  if (currentSong > 2) {
-    currentSong = 0;
+pause.addEventListener("click", function () {
+  console.log("click");
+  song.pause();
+});
+fetch("https://api.spotify.com/v1/browse/new-releases", {
+  method: "GET",
+  headers: {
+    "Authorization": "Bearer " + myToken
   }
+}).then(function (response) {
+  return response.json();
+}).then(function (result) {
+  console.log(result);
+  var section = document.querySelector("section");
+  result.albums.items.forEach(function (item) {
+    var div = document.createElement("div");
+    div.classList.add("albums-featured_images");
+    var img = document.createElement("img");
+    img.classList.add("albums-featured_img");
+    img.setAttribute("data-id", item.id);
+    img.src = "https://via.placeholder.com/150";
+    img.setAttribute("data-src", item.images[0].url); //img.src = item.images[0].url
 
-  playSong();
-  $("#play img").attr("src", "/assets/img/pause.png");
-  $("#image img").attr("src", poster[currentSong]);
-}
-
-function pre() {
-  currentSong--;
-
-  if (currentSong < 0) {
-    currentSong = 2;
-  }
-
-  playSong();
-  $("#play img").attr("src", "/assets/img/pause.png");
-  $("#image img").attr("src", poster[currentSong]);
-}
+    div.appendChild(img);
+    section.appendChild(div);
+    img.addEventListener("click", function () {
+      console.log(event.target.dataset.id);
+      var clickId = event.target.dataset.id;
+    });
+  });
+});
 //# sourceMappingURL=player.js.map
