@@ -28,7 +28,7 @@ fetch("https://api.spotify.com/v1/browse/new-releases", {
     img.classList.add("albums-featured_img");
     img.setAttribute("data-id", item.id);
     img.src = "https://via.placeholder.com/150";
-    img.setAttribute("data-src", item.images[0].url); //img.src = item.images[0].url
+    img.setAttribute("data-src", albums.images[0].url); //img.src = albums.images[0].url
 
     div.appendChild(img);
     section.appendChild(div);
