@@ -52,6 +52,7 @@
         justify-content: center;
         align-items:center;
         color:white;
+        margin: 10px 10px 10px 0;
 
         &_icon{
     height: 20px;
@@ -64,6 +65,7 @@
 .albums-details{
     margin: 0;
 }
-.albums-content{
-    margin: 0 25px;
+.song-time{
+    text-align: end;
+    width: 100px;
 }
